@@ -16,12 +16,11 @@ public class SecureResponse<T extends MedicalRecord & Confidential> {
         return this.success;
     }
 
-    public T getInfoData() {
+    public void getInfoData() {
         if (this.data != null) {
-            return this.data;
+            System.out.println(this.data);
         } else {
             System.out.println("Data Info: Tidak ada data");
-            return null;
         }
     }
 
