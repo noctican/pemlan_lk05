@@ -1,5 +1,6 @@
 package src;
 import src.interfaces.*;
+
 public class SecureResponse<T extends MedicalRecord & Confidential> {
     private boolean success;
     private T data;
