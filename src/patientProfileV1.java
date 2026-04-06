@@ -1,0 +1,46 @@
+package src;
+import src.interfaces.*;
+
+public class patientProfileV1 implements Versioned, MedicalRecord, Confidential{
+    // Atribut
+    private String patientID;
+    private String name;
+    private String ssn;
+    private int version;
+    private int securityLevel = 1;
+
+    // Constructor
+    public patientProfileV1(String ID, String name, String ssn, int securityLevel){
+        this.patientID = ID;
+        this.name = name;
+        this.ssn = ssn;
+        this.securityLevel = securityLevel;
+    }
+
+    public patientProfileV1(String ID, String name, int securityLevel){
+        this.patientID = ID;
+        this.name = name;
+        this.securityLevel = securityLevel;
+    }
+
+    // Method
+    @Override
+    public void maskSensitiveData(){
+
+    }
+
+    @Override
+    public int getVersion() {
+        return this.version;
+    }
+
+    @Override
+    public String getPatientID(){
+        return this.patientID;
+    }
+
+    @Override
+    public int getSecurityLevel(){
+        return this.securityLevel;
+    }
+}
