@@ -63,12 +63,12 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
 
     @Override
     public String getRiwayatAlergi(){
-        return this.alergiHistory;
+        return this.masked ? "********" : this.alergiHistory;
     }
 
     @Override
     public String getDiagnosis(){
-        return this.diagnosis;
+        return this.masked ? "********" : this.diagnosis;
     }
 
     @Override
@@ -78,5 +78,18 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
 
     public boolean getMasked(){
         return this.masked;
+    }
+
+    @Override
+    public String toString() {
+        return "PatientProfileV2 {" +
+               "\n  patientId      = " + patientID +
+               "\n  name           = " + name +
+               "\n  ssn            = " + (masked ? "******" : ssn) +
+               "\n  diagnosis      = " + getDiagnosis() +
+               "\n  allergyHistory = " + getRiwayatAlergi() +
+               "\n  version        = " + version +
+               "\n  securityLevel  = " + securityLevel +
+               "\n}";
     }
 }
