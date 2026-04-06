@@ -31,13 +31,13 @@
         <tr>
             <td>Muhammad Hilmi Isnaeni</td>
             <td>255150201111026</td>
-            <td>
+            <td>Pacarnya Zaki Arif Efendi
             </td>
         </tr>
         <tr>
             <td>Noval Zakky Ramadhan</td>
             <td>255150201111030</td>
-            <td>
+            <td>Saya admin pemiliki doksli asli
             </td>
         </tr>
     </tbody>
