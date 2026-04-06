@@ -47,5 +47,16 @@ public class patientProfileV1 implements Versioned, MedicalRecord, Confidential{
 
     public boolean getMasked(){
         return this.masked;
+    } 
+
+    @Override
+    public String toString(){
+        return "PatientProfileV1 {" +
+               "\n  patientId    = " + patientID +
+               "\n  name         = " + name +
+               "\n  ssn          = " + (masked ? "******" : ssn) +
+               "\n  version      = " + version +
+               "\n  securityLevel= " + securityLevel +
+               "\n}";
     }
 }
