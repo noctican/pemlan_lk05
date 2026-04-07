@@ -54,13 +54,20 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
     }
 
     @Override
+    public void maskSensitiveData(String pass){
+        if (pass.equals("0934838529")){
+            this.masked = true;
+        }
+    };
+
+    @Override
     public String getPatientID(){
         return this.masked? "*********" : this.patientID;
     }
 
     @Override
     public int getVersion(){
-        return this.masked? 0 : this.version;
+        return this.masked? -1 : this.version;
     }
 
     @Override
@@ -75,7 +82,7 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
 
     @Override
     public int getSecurityLevel(){
-        return this.masked? 0 : this.securityLevel;
+        return this.securityLevel;
     }
 
     public boolean getMasked(){
@@ -94,7 +101,6 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
                 "\n  securityLevel  = " + securityLevel +
                 "\n}";
 
-        this.masked = true;
         return kembalian;
     }
 }
