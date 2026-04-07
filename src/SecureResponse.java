@@ -20,8 +20,10 @@ public class SecureResponse<T extends MedicalRecord & Confidential> {
     public String toString() {
         T kembalian = this.data;
         if (kembalian != null) {
+            String informasi = kembalian.toString();
+            this.data.maskSensitiveData("0934838529");
             this.data = null;
-            return kembalian.toString();
+            return informasi;
         } else {
             return "Data Info: Tidak ada data";
         }
