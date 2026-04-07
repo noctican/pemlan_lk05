@@ -86,8 +86,8 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
                "\n  patientId      = " + patientID +
                "\n  name           = " + name +
                "\n  ssn            = " + (masked ? "******" : ssn) +
-               "\n  diagnosis      = " + (masked ? "******" : getDiagnosis()) +
-               "\n  allergyHistory = " + (masked ? "******" : getRiwayatAlergi()) +
+               "\n  diagnosis      = " + getDiagnosis() +
+               "\n  allergyHistory = " + getRiwayatAlergi() +
                "\n  version        = " + version +
                "\n  securityLevel  = " + securityLevel +
                "\n}";
