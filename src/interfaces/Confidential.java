@@ -2,5 +2,5 @@ package src.interfaces;
 
 public interface Confidential {
     public int getSecurityLevel();
-    public void unmaskSensitiveData();
+    public void unmaskSensitiveData(String pass);
 }

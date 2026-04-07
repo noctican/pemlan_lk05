@@ -47,18 +47,20 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
     }
 
     @Override
-    public void unmaskSensitiveData(){
-        this.masked = false;
+    public void unmaskSensitiveData(String pass){
+        if (pass.equals("0934838529")){
+            this.masked = false;
+        }
     }
 
     @Override
     public String getPatientID(){
-        return this.patientID;
+        return this.masked? "*********" : this.patientID;
     }
 
     @Override
     public int getVersion(){
-        return this.version;
+        return this.masked? 0 : this.version;
     }
 
     @Override
@@ -73,7 +75,7 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
 
     @Override
     public int getSecurityLevel(){
-        return this.securityLevel;
+        return this.masked? 0 : this.securityLevel;
     }
 
     public boolean getMasked(){
@@ -82,14 +84,17 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
 
     @Override
     public String toString() {
-        return "PatientProfileV2 {" +
-               "\n  patientId      = " + patientID +
-               "\n  name           = " + name +
-               "\n  ssn            = " + (masked ? "******" : ssn) +
-               "\n  diagnosis      = " + getDiagnosis() +
-               "\n  allergyHistory = " + getRiwayatAlergi() +
-               "\n  version        = " + version +
-               "\n  securityLevel  = " + securityLevel +
-               "\n}";
+        String kembalian = "PatientProfileV2 {" +
+                "\n  patientId      = " + patientID +
+                "\n  name           = " + name +
+                "\n  ssn            = " + (masked ? "******" : ssn) +
+                "\n  diagnosis      = " + getDiagnosis() +
+                "\n  allergyHistory = " + getRiwayatAlergi() +
+                "\n  version        = " + version +
+                "\n  securityLevel  = " + securityLevel +
+                "\n}";
+
+        this.masked = true;
+        return kembalian;
     }
 }

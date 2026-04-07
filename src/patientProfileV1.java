@@ -26,23 +26,25 @@ public class patientProfileV1 implements Versioned, MedicalRecord, Confidential{
 
     // Method
     @Override
-    public void unmaskSensitiveData(){
-        this.masked = false;
+    public void unmaskSensitiveData(String pass){
+        if (pass.equals("0934838529")){
+            this.masked = false;
+        }
     }
 
     @Override
     public int getVersion() {
-        return this.version;
+        return this.masked? 0 : this.version;
     }
 
     @Override
     public String getPatientID(){
-        return this.patientID;
+        return this.masked? "*********" : this.patientID;
     }
 
     @Override
     public int getSecurityLevel(){
-        return this.securityLevel;
+        return this.masked? 0 : this.securityLevel;
     }
 
     public boolean getMasked(){
@@ -51,12 +53,15 @@ public class patientProfileV1 implements Versioned, MedicalRecord, Confidential{
 
     @Override
     public String toString(){
-        return "PatientProfileV1 {" +
-               "\n  patientId    = " + patientID +
-               "\n  name         = " + name +
-               "\n  ssn          = " + (masked ? "******" : ssn) +
-               "\n  version      = " + version +
-               "\n  securityLevel= " + securityLevel +
-               "\n}";
+        String kembalian = "PatientProfileV1 {" +
+                "\n  patientId    = " + patientID +
+                "\n  name         = " + name +
+                "\n  ssn          = " + (masked ? "******" : ssn) +
+                "\n  version      = " + version +
+                "\n  securityLevel= " + securityLevel +
+                "\n}";
+
+        this.masked = true;
+        return kembalian;
     }
 }

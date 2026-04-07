@@ -18,8 +18,10 @@ public class SecureResponse<T extends MedicalRecord & Confidential> {
 
     @Override
     public String toString() {
-        if (this.data != null) {
-            return this.data.toString();
+        T kembalian = this.data;
+        if (kembalian != null) {
+            this.data = null;
+            return kembalian.toString();
         } else {
             return "Data Info: Tidak ada data";
         }
