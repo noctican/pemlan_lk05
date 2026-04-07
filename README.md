@@ -31,7 +31,7 @@
         <tr>
             <td>Muhammad Hilmi Isnaeni</td>
             <td>255150201111026</td>
-            <td>Pacarnya Zaki Arif Efendi
+            <td>Saya suka orang dengan nama Zaki Arif Efendi
             </td>
         </tr>
         <tr>
