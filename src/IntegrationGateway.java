@@ -11,9 +11,9 @@ public class IntegrationGateway<T extends MedicalRecord & Confidential & Version
     public SecureResponse<T> fetchData(String ID, int levelClearance) {
         if (this.mockDatabaseRecord != null) {
             if (this.mockDatabaseRecord.getSecurityLevel() >= levelClearance) {
+                this.mockDatabaseRecord.unmaskSensitiveData();
                 return new SecureResponse<T>(true, this.mockDatabaseRecord, "Data berhasil diambil");
             } else {
-                this.mockDatabaseRecord.maskSensitiveData();
                 return new SecureResponse<T>(false, this.mockDatabaseRecord, "Level keamanan tidak cukup");
             }
         } else {

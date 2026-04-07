@@ -8,7 +8,7 @@ public class patientProfileV1 implements Versioned, MedicalRecord, Confidential{
     private String ssn;
     private int version;
     private int securityLevel = 1;
-    private boolean masked;
+    private boolean masked = true;
 
     // Constructor
     public patientProfileV1(String ID, String name, String ssn, int securityLevel){
@@ -26,8 +26,8 @@ public class patientProfileV1 implements Versioned, MedicalRecord, Confidential{
 
     // Method
     @Override
-    public void maskSensitiveData(){
-        this.masked = true;
+    public void unmaskSensitiveData(){
+        this.masked = false;
     }
 
     @Override

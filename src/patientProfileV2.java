@@ -10,7 +10,7 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
     private String alergiHistory;
     private int securityLevel;
     private int version = 2;
-    private boolean masked;
+    private boolean masked = true;
 
     // Constructor
     public patientProfileV2(String ID, String name, String ssn, String diagnosis, String alergiHistory, int securityLevel){
@@ -47,8 +47,8 @@ public class patientProfileV2 implements Confidential, MedicalRecord, RiwayatAle
     }
 
     @Override
-    public void maskSensitiveData(){
-        this.masked = true;
+    public void unmaskSensitiveData(){
+        this.masked = false;
     }
 
     @Override
