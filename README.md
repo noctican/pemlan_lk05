@@ -40,7 +40,7 @@
             <td>
                 <ul>
                     <li>Merancang class diagram</li>
-                    <li>Mengimplementasikan class SecureRespone</li>
+                    <li>Mengimplementasikan class SecureResponse</li>
                     <li>Menyesuaikan laporan</li>
                 </ul>
             </td>
@@ -48,6 +48,12 @@
         <tr>
             <td>Muhammad Hilmi Isnaeni</td>
             <td>255150201111026</td>
+            <td>
+                <ul>
+                    <li>Implementasi MainClass (MainSimulation)</li>
+                    <li>Memperbaiki method toString() pada class SecureResponse</li>
+                </ul>
+            </td>
             <td>
             </td>
         </tr>
