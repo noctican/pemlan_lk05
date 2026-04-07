@@ -14,30 +14,52 @@
             <td>Candra Andika Putra</td>
             <td>255150200111035</td>
             <td>
+                <ul>
+                    <li>Merancang class diagram</li>
+                    <li>Mengimplementasikan interface</li>
+                    <li>Mengimplementasikan class IntegrationGateway</li>
+                    <li>Menyusun & menyesuaikan laporan</li>
+                </ul>
             </td>
         </tr>
         <tr>
             <td>Haidar Nadhifa Putra</td>
             <td>255150201111031</td>
             <td>
+                <ul>
+                    <li>Merancang awal class diagram dan menentukan method</li>
+                    <li>Membenarkan logika pada implementasi masking</li>
+                    <li>Merancang awal kode</li>
+                    <li>Menyusun laporan</li>
+                </ul>
             </td>
         </tr>
         <tr>
             <td>Bagas Zakaria</td>
             <td>255150207111064</td>
             <td>
+                <ul>
+                    <li>Merancang class diagram</li>
+                    <li>Mengimplementasikan class SecureRespone</li>
+                    <li>Menyesuaikan laporan</li>
+                </ul>
             </td>
         </tr>
         <tr>
             <td>Muhammad Hilmi Isnaeni</td>
             <td>255150201111026</td>
-            <td>Saya suka orang dengan nama Zaki Arif Efendi
+            <td>
             </td>
         </tr>
         <tr>
             <td>Noval Zakky Ramadhan</td>
             <td>255150201111030</td>
-            <td>Saya admin pemiliki doksli asli
+            <td>
+                <ul>
+                    <li>Menambahkan masking pada class patientProfileV1 dan patientProfileV2</li>
+                    <li>Mengimplementasikan masking pada class IntegrationGateway<T></li>
+                    <li>Menambahkan method toString() pada class patientProfileV1 dan patientProfileV2</li>
+                </ul>
             </td>
         </tr>
     </tbody>
